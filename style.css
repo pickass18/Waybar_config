@@ -1,0 +1,156 @@
+* {
+  /* General taskbar font, I like maple mono ^-^*/
+  font-family: Maple Mono;
+  border-radius: 8;
+  font-size: 14px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+  /* Linear gradients are used because it makes less harsh rounded border radius, gtk bug :p */
+  /* background-image: linear-gradient(to bottom, #141216 100%); */
+  border-radius: 14px;
+  padding: 0px;
+  border-style: none;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  /* background-color: rgba(26, 27, 38, 0.5); */
+
+
+}
+
+/* Target all modules */
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 1px;
+}
+
+.modules-left {
+  margin-left: 0px;
+}
+
+.modules-right {
+  margin-right: 0px;
+}
+
+
+
+
+#battery,
+#network,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(26, 27, 38, 0.5); */
+
+  margin: 6px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #d8cab8;
+
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, #40c2cc 100%);
+  color: #141216;
+  transition-duration: 120ms;
+}
+
+#custom-applauncher {
+  font-weight: bold;
+  transition-duration: 120ms;
+  color: rgb(19, 221, 210);
+  background-color: rgba(26, 27, 38, 0.5);
+
+}
+
+#custom-applauncher:hover {
+  background-color: #141216;
+
+  color: rgb(34, 197, 205);
+  transition-duration: 120ms;
+}
+
+#tray menu {
+  background-color: #141216;
+  color: #d8cab8;
+  padding: 4px;
+}
+
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+
+  margin: 3px;
+  color: #d8cab8;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #27232b;
+}
+
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+  color: #ac82e9;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #d8cab8;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #e1d556;
+}
+
+#workspaces button.focused {
+  color: #ac82e9;
+  font-weight: bold;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  transition-duration: 120ms;
+  background-color: rgba(26, 27, 38, 0.5);
+}
+
+#workspaces button.urgent {
+  color: #fcb167;
+}
+
+#battery {
+  /* background-color: #222222; */
+  color: #82cee7;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: #da3636;
+  /* background-color: #190203; */
+}
+
+#custom-bluetooth {
+  color: #1c71d8;
+  /* A nice Bluetooth blue color */
+  padding: 0 10px;
+  margin: 0 4px;
+}
